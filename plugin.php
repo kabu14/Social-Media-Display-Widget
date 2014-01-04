@@ -1,19 +1,19 @@
 <?php
 /*
-Plugin Name: TODO
-Plugin URI: TODO
-Description: TODO
+Plugin Name: Social Media Display
+Plugin URI: http://reframemarketing.com
+Description: Social Media Display is a WordPress widget designed to display social media icons by providing the link to the social profile.
 Version: 1.0
-Author: TODO
-Author URI: TODO
-Author Email: TODO
-Text Domain: widget-name-locale
+Author: Wayne Huang
+Author URI: http://reframemarketing.com
+Author Email: whuang@reframemarketing.com
+Text Domain: social-media-display
 Domain Path: /lang/
 Network: false
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
-Copyright 2013 TODO (email@domain.com)
+Copyright 2013 Reframe Marking (htt[://reframemarketing.com])
 
 This program is free software; you can redistribute it and/or modify
 it under the terms of the GNU General Public License, version 2, as
@@ -29,8 +29,8 @@ along with this program; if not, write to the Free Software
 Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
 */
 
-// TODO: change 'Widget_Name' to the name of your plugin
-class Widget_Name extends WP_Widget {
+
+class Social_Media_Display extends WP_Widget {
 
 	/*--------------------------------------------------*/
 	/* Constructor
@@ -49,14 +49,12 @@ class Widget_Name extends WP_Widget {
 		register_activation_hook( __FILE__, array( $this, 'activate' ) );
 		register_deactivation_hook( __FILE__, array( $this, 'deactivate' ) );
 
-		// TODO:	update classname and description
-		// TODO:	replace 'widget-name-locale' to be named more plugin specific. Other instances exist throughout the code, too.
 		parent::__construct(
-			'widget-name-id',
-			__( 'Widget Name', 'widget-name-locale' ),
+			'social-media-display-id',
+			__( 'Widget Name', 'social-media-display' ),
 			array(
-				'classname'		=>	'widget-name-class',
-				'description'	=>	__( 'Short description of the widget goes here.', 'widget-name-locale' )
+				'classname'		=>	'social-media-display',
+				'description'	=>	__( 'Social Media Display is a WordPress widget designed to display social media icons by providing the link to the social profile.', 'social-media-display' )
 			)
 		);
 
@@ -138,8 +136,8 @@ class Widget_Name extends WP_Widget {
 	 */
 	public function widget_textdomain() {
 
-		// TODO be sure to change 'widget-name' to the name of *your* plugin
-		load_plugin_textdomain( 'widget-name-locale', false, plugin_dir_path( __FILE__ ) . 'lang/' );
+		// TODO be sure to change 'social-media-display' to the name of *your* plugin
+		load_plugin_textdomain( 'social-media-display', false, plugin_dir_path( __FILE__ ) . 'lang/' );
 
 	} // end widget_textdomain
 
@@ -166,8 +164,7 @@ class Widget_Name extends WP_Widget {
 	 */
 	public function register_admin_styles() {
 
-		// TODO:	Change 'widget-name' to the name of your plugin
-		wp_enqueue_style( 'widget-name-admin-styles', plugins_url( 'widget-name/css/admin.css' ) );
+		wp_enqueue_style( 'social-media-display-admin-styles', plugins_url( 'social-media-display/css/admin.css' ) );
 
 	} // end register_admin_styles
 
@@ -176,8 +173,7 @@ class Widget_Name extends WP_Widget {
 	 */
 	public function register_admin_scripts() {
 
-		// TODO:	Change 'widget-name' to the name of your plugin
-		wp_enqueue_script( 'widget-name-admin-script', plugins_url( 'widget-name/js/admin.js' ), array('jquery') );
+		wp_enqueue_script( 'social-media-display-admin-script', plugins_url( 'social-media-display/js/admin.js' ), array('jquery') );
 
 	} // end register_admin_scripts
 
@@ -186,8 +182,7 @@ class Widget_Name extends WP_Widget {
 	 */
 	public function register_widget_styles() {
 
-		// TODO:	Change 'widget-name' to the name of your plugin
-		wp_enqueue_style( 'widget-name-widget-styles', plugins_url( 'widget-name/css/widget.css' ) );
+		wp_enqueue_style( 'social-media-display-widget-styles', plugins_url( 'social-media-display/css/widget.css' ) );
 
 	} // end register_widget_styles
 
@@ -196,12 +191,13 @@ class Widget_Name extends WP_Widget {
 	 */
 	public function register_widget_scripts() {
 
-		// TODO:	Change 'widget-name' to the name of your plugin
-		wp_enqueue_script( 'widget-name-script', plugins_url( 'widget-name/js/widget.js' ), array('jquery') );
+		// TODO:	Change 'social-media-display' to the name of your plugin
+		wp_enqueue_script( 'social-media-display-script', plugins_url( 'social-media-display/js/widget.js' ), array('jquery') );
 
 	} // end register_widget_scripts
 
 } // end class
 
+
 // TODO:	Remember to change 'Widget_Name' to match the class name definition
-add_action( 'widgets_init', create_function( '', 'register_widget("Widget_Name");' ) );
+add_action( 'widgets_init', create_function( '', 'register_widget("Social_Media_Display");' ) );
