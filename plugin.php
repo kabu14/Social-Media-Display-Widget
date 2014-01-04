@@ -50,8 +50,8 @@ class Social_Media_Display extends WP_Widget {
 		register_deactivation_hook( __FILE__, array( $this, 'deactivate' ) );
 
 		parent::__construct(
-			'social-media-display-id',
-			__( 'Widget Name', 'social-media-display' ),
+			'social-media-display',
+			__( 'Social Media Display', 'social-media-display' ),
 			array(
 				'classname'		=>	'social-media-display',
 				'description'	=>	__( 'Social Media Display is a WordPress widget designed to display social media icons by providing the link to the social profile.', 'social-media-display' )
@@ -102,7 +102,10 @@ class Social_Media_Display extends WP_Widget {
 
 		$instance = $old_instance;
 
-		// TODO:	Here is where you update your widget's old values with the new, incoming values
+		$instance['facebook'] = strip_tags($new_instance['facebook']);
+		$instance['twitter'] = strip_tags($new_instance['twitter']);
+		$instance['linkedin'] = strip_tags($new_instance['linkedin']);
+		$instance['google_plus'] = strip_tags($new_instance['google_plus']);
 
 		return $instance;
 
@@ -117,7 +120,13 @@ class Social_Media_Display extends WP_Widget {
 
     	// TODO:	Define default values for your variables
 		$instance = wp_parse_args(
-			(array) $instance
+			(array) $instance,
+			array(
+				'facebook'    => '',
+				'twitter'     => '',
+				'linkedin'    => '',
+				'google_plus' => ''
+			)
 		);
 
 		// TODO:	Store the values of the widget in their own variable
