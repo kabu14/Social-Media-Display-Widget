@@ -102,7 +102,7 @@ class Social_Media_Display extends WP_Widget {
 
 		$instance = $old_instance;
 
-		$instance['facebook'] = strip_tags($new_instance['facebook']);
+		$instance['facebook'] = strip_tags(stripslashes($new_instance['facebook']));
 		$instance['twitter'] = strip_tags($new_instance['twitter']);
 		$instance['linkedin'] = strip_tags($new_instance['linkedin']);
 		$instance['google_plus'] = strip_tags($new_instance['google_plus']);
@@ -208,5 +208,4 @@ class Social_Media_Display extends WP_Widget {
 } // end class
 
 
-// TODO:	Remember to change 'Widget_Name' to match the class name definition
 add_action( 'widgets_init', create_function( '', 'register_widget("Social_Media_Display");' ) );
