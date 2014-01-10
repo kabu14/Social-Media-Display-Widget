@@ -1,10 +1,10 @@
-=== Widget Name ===
+=== Social Media Display ===
 
-Contributors: username1, username2 (this should be a list of wordpress.org userid's)
-Donate link: http://example.com/
-Tags: widget, boilerplate
+Contributors: liquidalloy
+Donate link: http://reframemarketing.com/
+Tags: widget, social media display
 Requires at least: 3.3.1
-Tested up to: 3.3.1
+Tested up to: 3.8
 Stable tag: 4.3
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -13,50 +13,24 @@ Here is a short description of the plugin.  This should be no more than 150 char
 
 == Description ==
 
-This is the long description.  No limit, and you can use Markdown (as well as in the following sections).
-
-For backwards compatibility, if this section is missing, the full length of the short description will be used, and
-Markdown parsed.
-
-A few notes about the sections above:
-
-*   "Contributors" is a comma separated list of wp.org/wp-plugins.org usernames
-*   "Tags" is a comma separated list of tags that apply to the plugin
-*   "Requires at least" is the lowest version that the plugin will work on
-*   "Tested up to" is the highest version that you've *successfully used to test the plugin*. Note that it might work on
-higher versions... this is just the highest one you've verified.
-*   Stable tag should indicate the Subversion "tag" of the latest stable version, or "trunk," if you use `/trunk/` for
-stable.
-
-Note that the `readme.txt` of the stable tag is the one that is considered the defining one for the plugin, so
-if the `/trunk/readme.txt` file says that the stable tag is `4.3`, then it is `/tags/4.3/readme.txt` that'll be used
-for displaying information about the plugin.  In this situation, the only thing considered from the trunk `readme.txt`
-is the stable tag pointer.  Thus, if you develop in trunk, you can update the trunk `readme.txt` to reflect changes in
-your in-development version, without having that information incorrectly disclosed about the current stable version
-that lacks those changes -- as long as the trunk's `readme.txt` points to the correct stable tag.
-
-    If no stable tag is provided, it is assumed that trunk is stable, but you should specify "trunk" if that's where
-you put the stable version, in order to eliminate any doubt.
+Social Media Display is a widget that allows the user to post a full http link of their social media profiles and an icon will show where the widget is to be displayed. Currently the widget allows the posting of Facebook, Twitter, Linkedin and Google Plus profiles. 
 
 == Installation ==
 
-This section describes how to install the plugin and get it working.
-
-e.g.
-
-1. Upload `plugin-name.php` to the `/wp-content/plugins/` directory
+1. Upload `social-media-display.php` to the `/wp-content/plugins/` directory
+1. Upload facebook.png, twitter.png, linkedin.png, google_plus.png to the img directory of social-media-display folder. Must be named exactly like what is specified. 
 1. Activate the plugin through the 'Plugins' menu in WordPress
-1. Place `<?php do_action('plugin_name_hook'); ?>` in your templates
+1. To use widget you must first register the widget then call it. Read here: http://digwp.com/2010/02/how-to-widgetize-wordpress-theme/
 
 == Frequently Asked Questions ==
 
-= A question that someone might have =
+= Do I need to upload an icon and what type is it? =
 
-An answer to that question.
-
-= What about foo bar? =
-
-Answer to foo bar dilemma.
+yes icons associated with the social media must be uploaded in the img directory and labeled as 
+facebook.png
+twitter.png
+linkedin.png
+google_plus.png
 
 == Screenshots ==
 
@@ -67,11 +41,7 @@ the directory of the stable readme.txt, so in this case, `/tags/4.3/screenshot-1
 == Changelog ==
 
 = 1.0 =
-* A change since the previous version.
-* Another change.
-
-= 0.5 =
-* List versions from most recent at top to oldest at bottom.
+* Completed project
 
 == Upgrade Notice ==
 
@@ -80,34 +50,3 @@ Upgrade notices describe the reason a user should upgrade.  No more than 300 cha
 
 = 0.5 =
 This version fixes a security related bug.  Upgrade immediately.
-
-== Arbitrary section ==
-
-You may provide arbitrary sections, in the same format as the ones above.  This may be of use for extremely complicated
-plugins where more information needs to be conveyed that doesn't fit into the categories of "description" or
-"installation."  Arbitrary sections will be shown below the built-in sections outlined above.
-
-== A brief Markdown Example ==
-
-Ordered list:
-
-1. Some feature
-1. Another feature
-1. Something else about the plugin
-
-Unordered list:
-
-* something
-* something else
-* third thing
-
-Here's a link to [WordPress](http://wordpress.org/ "Your favorite software") and one to [Markdown's Syntax Documentation][markdown syntax].
-Titles are optional, naturally.
-
-[markdown syntax]: http://daringfireball.net/projects/markdown/syntax
-            "Markdown is what the parser uses to process much of the readme file"
-
-Markdown uses email style notation for blockquotes and I've been told:
-> Asterisks for *emphasis*. Double it up  for **strong**.
-
-`<?php code(); // goes in backticks ?>`

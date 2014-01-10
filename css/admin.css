@@ -1,1 +1,7 @@
-/* This stylesheet is used to style the admin option form of the widget. */
+.social-media-display label {
+	display: block;
+}
+
+.social-media-display input {
+	margin-bottom: 10px;
+}

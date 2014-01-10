@@ -1,1 +1,9 @@
-/* This stylesheet is used to style the public view of the widget. */
+.social-media-display li {
+	text-decoration: none;
+}
+
+.social-media-display a {
+	display: block;
+	width: 48px;
+	height: 48px;
+}
