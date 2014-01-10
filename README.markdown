@@ -10,6 +10,9 @@ Social Media Display is a WordPress widget designed to display social media icon
 4. Google Plus
 
 ## How to use
+For full details read README.txt.
+
+After uploading the plugin activate it in the plugins menu.
 Need to upload social media icons and they must be in png format. 
 The filename for each social media must be:
 facebook.png
