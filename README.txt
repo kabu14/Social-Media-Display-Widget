@@ -17,16 +17,16 @@ Social Media Display is a widget that allows the user to post a full http link o
 
 == Installation ==
 
-1. Upload `social-media-display.php` to the `/wp-content/plugins/` directory
+1. Upload `social-media-display` folder to the `/wp-content/plugins/` directory
 1. Upload facebook.png, twitter.png, linkedin.png, google_plus.png to the img directory of social-media-display folder. Must be named exactly like what is specified. 
 1. Activate the plugin through the 'Plugins' menu in WordPress
-1. To use widget you must first register the widget then call it. Read here: http://digwp.com/2010/02/how-to-widgetize-wordpress-theme/
+1. To use widget you must first register the widget in functions.php then call the dynamic_sidebar function in your theme. Read here: http://digwp.com/2010/02/how-to-widgetize-wordpress-theme/
 
 == Frequently Asked Questions ==
 
 = Do I need to upload an icon and what type is it? =
 
-yes icons associated with the social media must be uploaded in the img directory and labeled as 
+yes, icons associated with the supported social media must be uploaded in the img directory of the plugin and labeled as 
 facebook.png
 twitter.png
 linkedin.png
